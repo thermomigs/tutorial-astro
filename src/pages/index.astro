@@ -1,24 +1,24 @@
 ---
-const pageTitle = "BLOG";
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import '../styles/global.css';
+import "../scripts/menu.js";
+
+const pageTitle = 'Home Page';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <h1>{pageTitle}</h1>
+    <Footer />
 
-<h1>{pageTitle}</h1>
-<h2>... and my new Astro site!</h2>
-		<h1>Astro</h1>
-		<h2>Welcome to my life</h2>
-		<p>I owe you eve dmddmndmdmd</p>
-	</body>
+  </body>
 </html>
